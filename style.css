@@ -28,6 +28,39 @@ body {
   padding: 60px 20px;
 }
 
+.about, .services, .projects, .contact {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #1e6fd9;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.contact a {
+  color: #1e6fd9;
+  text-decoration: none;
+}
+
 footer {
   text-align: center;
   padding: 20px;
