@@ -1,22 +1,36 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #f4f6f8;
   color: #333;
 }
-header {
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
   background-color: #1e6fd9;
   color: white;
-  padding: 20px;
-  text-align: center;
 }
-main {
-  padding: 40px;
-  text-align: center;
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 20px;
 }
+
+.tagline {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.intro {
+  text-align: center;
+  padding: 60px 20px;
+}
+
 footer {
-  background-color: #ddd;
-  padding: 10px;
   text-align: center;
+  padding: 20px;
+  background-color: #ddd;
+  font-size: 0.9em;
 }
