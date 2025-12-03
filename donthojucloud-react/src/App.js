@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./App.css"; // if App.css is one level up
+import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -15,6 +15,21 @@ function App() {
     slidesToScroll: 1
   };
 
+  const projects = [
+    {
+      title: "Sales Forecasting with NLP",
+      description: "Capstone project predicting sales trends using text analytics."
+    },
+    {
+      title: "Executive Dashboards",
+      description: "Power BI dashboards for healthcare KPIs and decision-making."
+    },
+    {
+      title: "ETL Pipeline Optimization",
+      description: "Azure Data Factory workflows reducing refresh times by 40%."
+    }
+  ];
+
   return (
     <div className="App">
       {/* Navigation */}
@@ -27,7 +42,11 @@ function App() {
 
       {/* Hero Section */}
       <header id="home" className="hero">
-        <img src="/logo.png" alt="Donthoju.cloud logo" className="logo" />
+        <img
+          src={`${process.env.PUBLIC_URL}/logo.png`}
+          alt="Donthoju.cloud logo"
+          className="logo"
+        />
         <h1>Donthoju.cloud</h1>
         <p className="tagline">Future in Focus</p>
       </header>
@@ -35,18 +54,12 @@ function App() {
       {/* Carousel Section */}
       <div className="carousel" id="projects">
         <Slider {...settings}>
-          <div className="slide">
-            <h2>Sales Forecasting with NLP</h2>
-            <p>Capstone project predicting sales trends using text analytics.</p>
-          </div>
-          <div className="slide">
-            <h2>Executive Dashboards</h2>
-            <p>Power BI dashboards for healthcare KPIs and decision-making.</p>
-          </div>
-          <div className="slide">
-            <h2>ETL Pipeline Optimization</h2>
-            <p>Azure Data Factory workflows reducing refresh times by 40%.</p>
-          </div>
+          {projects.map((project, index) => (
+            <div className="slide" key={index}>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+            </div>
+          ))}
         </Slider>
       </div>
 
@@ -69,7 +82,12 @@ function App() {
       {/* Contact Section */}
       <footer id="contact">
         <h2>Get in Touch</h2>
-        <p>Email: <a href="mailto:niteeshkumardonthoju@gmail.com">niteeshkumardonthoju@gmail.com</a></p>
+        <p>
+          Email:{" "}
+          <a href="mailto:niteeshkumardonthoju@gmail.com">
+            niteeshkumardonthoju@gmail.com
+          </a>
+        </p>
         <p>Phone: 260-600-7457</p>
         <p>© 2025 Donthoju.cloud • Dallas, GA</p>
       </footer>
