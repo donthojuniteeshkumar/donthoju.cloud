@@ -18,15 +18,18 @@ function App() {
   const projects = [
     {
       title: "Sales Forecasting with NLP",
-      description: "Capstone project predicting sales trends using text analytics."
+      description:
+        "Capstone project leveraging Natural Language Processing to predict sales trends from unstructured data."
     },
     {
       title: "Executive Dashboards",
-      description: "Power BI dashboards for healthcare KPIs and decision-making."
+      description:
+        "Developed Power BI dashboards for healthcare analytics, enabling leadership to monitor KPIs in real time."
     },
     {
       title: "ETL Pipeline Optimization",
-      description: "Azure Data Factory workflows reducing refresh times by 40%."
+      description:
+        "Designed scalable ETL workflows in Azure Data Factory, reducing data refresh times by 40%."
     }
   ];
 
@@ -51,36 +54,61 @@ function App() {
         <p className="tagline">Future in Focus</p>
       </header>
 
-      {/* Carousel Section */}
-      <div className="carousel" id="projects">
+      {/* Intro Section */}
+      <section className="intro">
+        <h2>Cloud Analytics Partner</h2>
+        <p>We deliver insights that scale.</p>
+      </section>
+
+      {/* About Section */}
+      <section className="about">
+        <h2>Who We Serve</h2>
+        <p>
+          Donthoju.cloud is built for executives, entrepreneurs, and
+          organizations seeking clarity in their data. Whether you’re a Fortune
+          500 company or a growing startup, we deliver insights that drive
+          decisions.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="services" id="services">
+        <h2>What We Do</h2>
+        <ul>
+          <li>
+            <strong>Business Analysis:</strong> Translating requirements into
+            actionable insights.
+          </li>
+          <li>
+            <strong>Business Intelligence:</strong> Building dashboards with
+            Power BI, SQL, and Azure.
+          </li>
+          <li>
+            <strong>Predictive Modeling:</strong> Using NLP and machine learning
+            to forecast trends.
+          </li>
+          <li>
+            <strong>Workflow Optimization:</strong> Streamlining processes with
+            ETL and automation.
+          </li>
+        </ul>
+      </section>
+
+      {/* Projects Section */}
+      <section className="projects" id="projects">
+        <h2>Projects</h2>
         <Slider {...settings}>
           {projects.map((project, index) => (
-            <div className="slide" key={index}>
-              <h2>{project.title}</h2>
+            <div className="slide project-card" key={index}>
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
           ))}
         </Slider>
-      </div>
-
-      {/* Services Section */}
-      <div className="flex-layout" id="services">
-        <div className="card">
-          <h3>Business Analysis</h3>
-          <p>Translating requirements into actionable insights.</p>
-        </div>
-        <div className="card">
-          <h3>Business Intelligence</h3>
-          <p>Building dashboards with Power BI, SQL, and Azure.</p>
-        </div>
-        <div className="card">
-          <h3>Predictive Modeling</h3>
-          <p>Using NLP and ML to forecast trends.</p>
-        </div>
-      </div>
+      </section>
 
       {/* Contact Section */}
-      <footer id="contact">
+      <section id="contact" className="contact">
         <h2>Get in Touch</h2>
         <p>
           Email:{" "}
@@ -89,6 +117,10 @@ function App() {
           </a>
         </p>
         <p>Phone: 260-600-7457</p>
+      </section>
+
+      {/* Footer */}
+      <footer>
         <p>© 2025 Donthoju.cloud • Dallas, GA</p>
       </footer>
     </div>
