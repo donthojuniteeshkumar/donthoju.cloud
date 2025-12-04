@@ -15,6 +15,7 @@ function App() {
     slidesToScroll: 1
   };
 
+  // ✅ Make sure all values are plain strings
   const projects = [
     {
       title: "Sales Forecasting with NLP",
@@ -100,8 +101,9 @@ function App() {
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div className="slide project-card" key={index}>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              {/* ✅ Ensure only strings are rendered */}
+              <h3>{String(project.title)}</h3>
+              <p>{String(project.description)}</p>
             </div>
           ))}
         </Slider>
